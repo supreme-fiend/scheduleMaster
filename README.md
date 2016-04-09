@@ -16,7 +16,7 @@ Each cell in the main table is a 32 bit vector, each bit containing a true or fa
 Multiple choices are available for each table. If a table has multiple choices for allocation, then two tables are formed. In one the subject with the most priority (the subjects are sorted with priority) is added and in the second, the available choices are left for consideration. So, if the person involved in scheduling does not like a table, a stack of tables is created for multiple choices.
 
 #Working
-![Flowchart](https://raw.github.com/BloodshedThrone/scheduleMaster/master/Screenshots/Untitled.png "Flowchart")
+![Flowchart](https://raw.github.com/BloodshedThrone/scheduleMaster/master/screenshots/Untitled.png "Flowchart")
 
 
 
