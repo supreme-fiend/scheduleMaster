@@ -3,7 +3,6 @@ In schools and universities, it takes time to sort out which class has which sub
 
 Grade 9 Project- Pranay Venkatesh (BloodshedThrone), 2015-16.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #Highlights
 *Main Table <br>
