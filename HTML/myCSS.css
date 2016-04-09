@@ -1,0 +1,40 @@
+/**************************************************************************************
+*                                         CSS                                         *
+*           BASICALLY, I USED CSS IN HTML DOCUMENTATION AND WANTED TO SHOW OFF        *
+*           SOME OF THAT SKILL HERE                                                   *
+*                                                                                     *
+*           PRANAY VENKATESH (BLOODSHEDTHRONE 2015-16)                                *
+**************************************************************************************/
+
+#header {                              /*This is the CSS script for the Header*/
+    background-color:black;   
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {                                 /*This is the CSS script for the links*/
+    line-height:30px;
+    background-color:#eeeeee;
+    width:200px;
+    float:left;
+    padding:5px; 
+}
+#section {							  /*This is the CSS script for the content*/	
+    width:1300px;
+    float:left;
+    padding:10px;	
+}
+#quote {							  /*This is the CSS script for the quote*/
+ width:700px;
+    float:right; 
+}
+
+
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
