@@ -3,11 +3,13 @@ In schools and universities, it takes time to sort out which class has which sub
 
 Grade 9 Project- Pranay Venkatesh (BloodshedThrone), 2015-16.
 
-...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #Highlights
 *Main Table <br>
 The primary function of the program is creating the main table. The table is a cr x sn array, where cr is the classroom and sn is the session.
+
+![Flowchart](https://raw.github.com/BloodshedThrone/scheduleMaster/master/screenshots/table.png "Flowchart")
 
 *Vector <br>
 Each cell in the main table is a 32 bit vector, each bit containing a true or false for availability of a subject for allocation into a particular class's session. So, there can be a maximum of 31 subjects, (the 32nd bit for final check-up as to whether the cell has a subject or not).
