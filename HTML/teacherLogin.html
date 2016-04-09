@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+
+</style>
+<title>Teacher Login</title>
+</head>
+<body bgcolor = '#d3bdff'>
+<div id= "header">
+<p><font size = "20" color = 'red'>INTERNATIONAL ACADEMY FOR FOUNDATIONAL EXCELLENCE</font></p>
+<br>
+<font size = "10" color = 'red'>Teacher Login</font>
+</div>
+<br>
+<br>
+
+<script>
+var names = ["Ahalya", "Draupadi", "Seetha", "Tara", "Madodri", "Kunti", "Madri"];
+var passwords = ["password1", "password2", "password3", "password4", "password5", "password6", "password7"];
+
+function userPassword(form) {
+	var index = names.indexOf(form.id.value);
+	if (index == -1) 
+		alert("Invalid name");
+	else if (form.pass.value == passwords[index]) {              
+		location= names[index] + ".html";
+	} else {
+		alert("Invalid Password");	
+	}
+}
+</script>
+
+<center>
+<table border="1">
+<tr>
+<td><b>Name:</b></td>
+<td><form name="login"><input name="id" type="text">
+</td>
+</tr>
+<tr>
+<td><b>Password:</b></td>
+<td><input name="pass" type="password"></td></tr>
+<tr>
+<td><center><input type="button" value="Login" onClick="userPassword(this.form)"></center></td>
+<td><center><br><input type="Reset">
+</form>
+</td>
+</tr>
+</table>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id= "footer">
+(c)Pranay Venkatesh 2016 All Rights Reserved.
+</div> 
+</body>
+<html>

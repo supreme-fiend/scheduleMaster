@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<head>
+<style>
+#header {
+	background-color:black;
+    color:red;
+    text-align:center;
+    padding:5px;
+}    
+#events {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:400px;
+    float:left;
+    padding:5px;
+	}
+	
+#section {
+    width:350px;
+	float:left;
+    padding:10px;	 	 
+}
+#footer {
+ background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;
+}
+</style>
+<title>Event Table</title>
+</head>
+<body bgcolor = '#d3bdff'>
+<div id = "header">
+<center><font size = "20" color = 'red'>INTERNATIONAL ACADEMY FOR FOUNDATIONAL EXCELLENCE</font></center>
+<center><font size = "10" color = 'red'>Event List Generator</font></center>
+</div>
+<br>
+<br>
+<div id = "events" align = 'left'>
+List of Events
+</div>
+<input type="button" onclick="saveEvents()">SAVE</input>
+<input type="button" onclick="clearEvents()">CLEAR</input>
+<script src="events.js"></script>
+
+<script>
+
+function greater(d1,d2) { 				// check if d1 is later than d2
+	var d1el = d1.split("-");
+	var d2el = d2.split("-");
+	if (parseInt(d1el[2]) > parseInt(d2el[2])) return true;
+	else if (parseInt(d1el[2]) < parseInt(d2el[2])) return false;
+	if (parseInt(d1el[1]) > parseInt(d2el[1])) return true;
+	else if (parseInt(d1el[1]) < parseInt(d2el[1])) return false;
+	if (parseInt(d1el[0]) > parseInt(d2el[0])) return true;
+	else if (parseInt(d1el[0]) < parseInt(d2el[0])) return false;
+	return true;
+}
+
+function insert(el, e) {
+	var ele;
+	if (el == null || el.length == 0) { return [e]; }
+	ele = el.pop();
+	if (greater(ele[1],e[1])) {
+		el.push(ele);
+		el.push(e);
+		return el;
+	} else {
+		var res = insert(el,e); 
+		res.push(ele);
+		return res;
+	}
+}
+
+function buttonClick(form){
+	var event =	form.event1.value;
+	var date =	form.date1.value;
+	var dateElems = date.split("-");
+	date = dateElems[2] + "-" + dateElems[1] + "-" + dateElems[0];
+	var teacher = form.teacherInvolved.value;
+	var className =	form.classInvolved.value;
+	eventList = insert(eventList,[event,date,teacher,className]);
+	displayEvents();	// Displays all the events
+}
+
+function displayEvents() { 		// Displays all the events 
+	var str = "<h2> List of Events </h2>\n";
+	for (var i=0; i < eventList.length; i++)
+		str += "<p>" + eventList[i][1] + " : " + eventList[i][0] + "</p>\n";
+	document.getElementById("events").innerHTML = str;	
+}
+
+// File writing functions
+function writeUTFBytes(view, offset, string) { 
+	var lng = string.length;
+	for (var i = 0; i < lng; i++) view.setUint8(offset + i, string.charCodeAt(i));
+}
+
+function writeToFile(str,name) {
+	var workSpaceBuffer = new ArrayBuffer(str.length);  
+	var	view = new DataView(workSpaceBuffer); 
+	writeUTFBytes(view,0,str);
+	var	blob = new Blob ( [ view ], { type : 'text/html' } );    
+	var url = (window.URL || window.webkitURL).createObjectURL(blob);
+	var	link = window.document.createElement('a');	document.body.appendChild(link);
+	link.setAttribute('href',url); link.setAttribute('download',name + ".js");
+	link.click();  document.body.removeChild(link);
+}
+
+function saveEvents() {			// Saves events to a file 
+	var str = "eventList = " + JSON.stringify(eventList) + "\n";
+	writeToFile(str,"events");
+}
+
+function clearEvents() {				// Empties the event list
+	eventList = [];
+	displayEvents();
+}
+displayEvents();
+</script>
+<div id = "section" align = 'right'>
+<center>
+<table border="1">
+<th rowspan = '8'>EVENT</th>
+<tr>
+<td><b>Event Name:</b></td>
+<td><form name="event1"><input name="event1" type="text"></td>
+</tr>
+<tr>
+<td><b>Event Date</b></td>
+<td><input name="date1" type="date"></td>
+</tr>
+<tr>
+<td><b>Teacher Responsible</b></td>
+<td><input name="teacherInvolved" type="text"></td>
+</tr>
+<tr>
+<td><b>Class Involved</b></td>
+<td><input name="classInvolved" type="text"></td>
+</tr>
+<tr>
+</tr>
+<td><center><input type="button" value="Confirm" onclick ="buttonClick(this.form)"></center></td>
+<td><center><br><input type="Reset">
+</tr>
+</table>
+</center>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="footer">
+(c)Pranay Venkatesh 2016 All Rights Reserved
+</div>
+</body>
+<html>
