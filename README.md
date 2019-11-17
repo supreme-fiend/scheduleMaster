@@ -9,6 +9,8 @@ and distribution of this content is free under CC 2.0
 https://creativecommons.org/licenses/by/2.0/
 **************************************************************************************************************************************
 
+MASSIVE NOTE :: WHEN ATTEMPTING TO RUN THIS WHOLE PROJECT, START BY TAKING ALL FILES IN THE FOLDER v0.1 and ADDING THEM TO THE HTML FOLDER. THEN START WITH "Home Page.html" TO RUN THE WHOLE THING.
+
 # Highlights
 
 * Main Table <br>
