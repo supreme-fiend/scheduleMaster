@@ -4,7 +4,7 @@ In schools and universities, it takes time to sort out which class has which sub
 Grade 9 Project- Pranay Venkatesh (BloodshedThrone), 2015-16.
 
 *************************************************************************************************************************************
-The content in this repository are under the ownership of Pranay Venkatesh (BloodshedThrone 2015-16)
+The content in this repository are under the ownership of Pranay Venkatesh (SupremeFiend)
 and distribution of this content is free under CC 2.0
 https://creativecommons.org/licenses/by/2.0/
 **************************************************************************************************************************************
