@@ -1,7 +1,7 @@
 # scheduleMaster
 In schools and universities, it takes time to sort out which class has which subject or which teacher teaches every class. This is a simple algorithm that can make a time table for sessions in a university.
 
-Grade 9 Project- Pranay Venkatesh (BloodshedThrone), 2015-16.
+Grade 9 Project- Pranay Venkatesh (SupremeFiend), 2015-16.
 
 *************************************************************************************************************************************
 The content in this repository are under the ownership of Pranay Venkatesh (SupremeFiend)
